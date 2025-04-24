@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact MojiMood - Emoji Generator Support</title>
+    <meta name="description" content="Contact MojiMood for support or feedback about our mood-based emoji generator and emoji story creator. We're privacy-focused, easy-to-use, and perfect for creative emoji combinations.">
+    <meta name="keywords" content="emoji generator, emoji story creator, mood-based emoji generator, generate emoji stories, custom emoji combinations, privacy-focused emoji generator, fun emoji tools, web-based emoji creator, no-signup emoji tool, easy-to-use emoji story creator, social media emoji tools, creative communication with emojis, emoji art generator, online emoji generator, generate emojis by mood, how to make an emoji story, best emoji generators, tools for creating emoji combinations, emoji story ideas, creative ways to use emojis">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MojiMood</title>
+    <meta name="description" content="Contact MojiMood - Share your feedback and suggestions">
+    <meta name="keywords" content="contact mojimood, feedback, suggestions">
+    <meta property="og:title" content="Contact MojiMood">
+    <meta property="og:description" content="Share your feedback and suggestions with MojiMood">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/theme.js" defer></script>
+    <script src="./assets/script.js" defer></script>
+    <style>
+        input:focus, select:focus, button:focus, textarea:focus {
+            outline: none !important;
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.4) !important;
+        }
+        
+        /* Light theme styles */
+        body[data-theme="light"] input, 
+        body[data-theme="light"] textarea {
+            color: #000000 !important;
+            background-color: rgba(255, 255, 255, 0.9) !important;
+        }
+        
+        /* Dark theme styles */
+        body[data-theme="dark"] input, 
+        body[data-theme="dark"] textarea,
+        body[data-theme="dark"] input:focus,
+        body[data-theme="dark"] textarea:focus,
+        body[data-theme="dark"] input:active,
+        body[data-theme="dark"] textarea:active,
+        body[data-theme="dark"] input:hover,
+        body[data-theme="dark"] textarea:hover,
+        body[data-theme="dark"] input::selection,
+        body[data-theme="dark"] textarea::selection,
+        body[data-theme="dark"] input:-webkit-autofill,
+        body[data-theme="dark"] textarea:-webkit-autofill,
+        body[data-theme="dark"] input:-webkit-autofill:hover,
+        body[data-theme="dark"] input:-webkit-autofill:focus,
+        body[data-theme="dark"] input:-webkit-autofill:active {
+            color: #ffffff !important;
+            background-color: rgba(30, 30, 30, 0.9) !important;
+            caret-color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            -webkit-box-shadow: 0 0 0px 1000px rgba(30, 30, 30, 0.9) inset !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+        
+        /* Ensure text selection color is visible */
+        body[data-theme="dark"] input::selection,
+        body[data-theme="dark"] textarea::selection {
+            background-color: rgba(245, 158, 11, 0.3) !important;
+        }
+        
+        .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.1), 0 4px 6px -2px rgba(245, 158, 11, 0.05) !important;
+        }
+    </style>
+</head>
+<body class="font-poppins transition duration-300" data-theme="dark">
+    <header class="py-4 bg-opacity-30 backdrop-blur-md">
+        <div class="container mx-auto px-4 relative flex items-center justify-between">
+            <h1 class="text-2xl md:text-3xl font-bold tracking-wide text-yellow-400 dark:text-yellow-500 light:text-orange-500">MojiMood</h1>
+            
+            <nav class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-8">
+                <a href="index.html" class="hover:text-yellow-400 transition-colors duration-200">Home</a>
+                <a href="about.html" class="hover:text-yellow-400 transition-colors duration-200">About</a>
+                <a href="faq.html" class="hover:text-yellow-400 transition-colors duration-200">FAQ</a>
+                <a href="privacy-policy.html" class="hover:text-yellow-400 transition-colors duration-200">Privacy</a>
+                <a href="contact.html" class="hover:text-yellow-400 transition-colors duration-200">Contact</a>
+            </nav>
+            
+            <div class="ml-auto flex items-center">
+                <button id="themeToggle" class="text-2xl hover:scale-110 transition-transform">🌙</button>
+                <button id="mobileMenuBtn" class="md:hidden ml-4 text-xl">☰</button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-opacity-90 backdrop-blur-md dark:bg-gray-900 light:bg-gray-100 py-2">
+            <div class="container mx-auto px-4 flex flex-col space-y-2">
+                <a href="index.html" class="py-2 hover:text-yellow-400 transition-colors duration-200">Home</a>
+                <a href="about.html" class="py-2 hover:text-yellow-400 transition-colors duration-200">About</a>
+                <a href="faq.html" class="py-2 hover:text-yellow-400 transition-colors duration-200">FAQ</a>
+                <a href="privacy-policy.html" class="py-2 hover:text-yellow-400 transition-colors duration-200">Privacy</a>
+                <a href="contact.html" class="py-2 hover:text-yellow-400 transition-colors duration-200">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 flex flex-col items-center px-4 py-6 md:py-8">
+        <h1 class="text-2xl md:text-3xl font-bold mb-6 text-yellow-400 dark:text-yellow-500 light:text-orange-500">Contact Us</h1>
+        
+        <div class="w-full max-w-lg">
+            <form id="contactForm" class="space-y-6" action="https://formsubmit.co/mojimood3@gmail.com" method="POST" autocomplete="on">
+                <div class="space-y-4">
+                    <div>
+                        <label for="name" class="block mb-2 font-medium">Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-2 rounded-lg bg-opacity-10 backdrop-blur-sm dark:bg-white/10 light:bg-black/5 border-2 border-opacity-50 dark:border-yellow-500/50 light:border-orange-500/50">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block mb-2 font-medium">Email Address</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-2 rounded-lg bg-opacity-10 backdrop-blur-sm dark:bg-white/10 light:bg-black/5 border-2 border-opacity-50 dark:border-yellow-500/50 light:border-orange-500/50">
+                    </div>
+
+                    <div>
+                        <label for="country" class="block mb-2 font-medium">Country</label>
+                        <input type="text" id="country" name="country" required
+                            class="w-full px-4 py-2 rounded-lg bg-opacity-10 backdrop-blur-sm dark:bg-white/10 light:bg-black/5 border-2 border-opacity-50 dark:border-yellow-500/50 light:border-orange-500/50">
+                    </div>
+
+                    <div>
+                        <label for="state" class="block mb-2 font-medium">State</label>
+                        <input type="text" id="state" name="state" required
+                            class="w-full px-4 py-2 rounded-lg bg-opacity-10 backdrop-blur-sm dark:bg-white/10 light:bg-black/5 border-2 border-opacity-50 dark:border-yellow-500/50 light:border-orange-500/50">
+                    </div>
+
+                    <div>
+                        <label for="feedback" class="block mb-2 font-medium">Your Feedback</label>
+                        <textarea id="feedback" name="feedback" rows="5" required
+                            class="w-full px-4 py-2 rounded-lg bg-opacity-10 backdrop-blur-sm dark:bg-white/10 light:bg-black/5 border-2 border-opacity-50 dark:border-yellow-500/50 light:border-orange-500/50"></textarea>
+                    </div>
+                </div>
+
+                <input type="hidden" name="_subject" value="MojiMood Feedback">
+                <input type="hidden" name="_next" value="https://mojimood.netlify.app/thank-you.html">
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit" id="submitBtn"
+                    class="w-full py-3 px-6 rounded-lg font-semibold bg-yellow-400 dark:bg-yellow-500 light:bg-orange-500 text-black hover:opacity-90 transition-opacity">
+                    Send Feedback
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            form.addEventListener('submit', function() {
+                // Disable button to prevent multiple submissions
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+                
+                // Show confirmation message
+                setTimeout(function() {
+                    alert('Thank you for your feedback! Your message will be sent to our team.');
+                }, 100);
+            });
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="copyright">&copy; 2025 <strong>MojiMood</strong>. All rights reserved.</p>
+            <p class="made-with">Made with ❤️ by <a href="#" class="footer-link">Varinder</a></p>
+            <nav class="footer-links">
+                <a href="index.html" class="footer-link">Home</a>
+                <span class="separator">|</span>
+                <a href="about.html" class="footer-link">About</a>
+                <span class="separator">|</span>
+                <a href="faq.html" class="footer-link">FAQ</a>
+                <span class="separator">|</span>
+                <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+                <span class="separator">|</span>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
